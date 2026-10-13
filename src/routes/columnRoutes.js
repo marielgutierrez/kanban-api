@@ -4,12 +4,12 @@ const router = express.Router();
 const {
     createColumn,
     deleteColumn
-} = require("../../controllers/columnController");
+} = require("../controllers/columnController");
 
 // Middlewares
-const validateObjectId = require("../../middlewares/validateObjectId");
-const parentCheck = require("../../middlewares/parentCheck");
-const validateBoardColumn = require("../../middlewares/validateBoardColumn");
+const validateObjectId = require("../middlewares/validateObjectId");
+const parentCheck = require("../middlewares/parentCheck");
+const validateBoardColumn = require("../middlewares/validateBoardColumn");
 
 // Crear una columna dentro de un tablero
 router.post(

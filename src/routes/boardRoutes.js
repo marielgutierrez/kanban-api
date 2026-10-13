@@ -5,9 +5,9 @@ const router = express.Router();
 const {
     createBoard,
     getBoard
-} = require("../../controllers/boardController");
+} = require("../controllers/boardController");
 
-const validateObjectId = require("../../middlewares/validateObjectId");
+const validateObjectId = require("../middlewares/validateObjectId");
 
 // POST /api/boards
 router.post("/", createBoard);
