@@ -1,0 +1,32 @@
+const express = require("express");
+const router = express.Router();
+
+const {
+    createColumn,
+    deleteColumn
+} = require("../controllers/columnController");
+
+// Middlewares
+const validateObjectId = require("../middlewares/validateObjectId");
+const parentCheck = require("../middlewares/parentCheck");
+const validateBoardColumn = require("../middlewares/validateBoardColumn");
+
+// Crear una columna dentro de un tablero
+router.post(
+    "/:boardId/columns",
+    validateObjectId("boardId"),
+    parentCheck,
+    createColumn
+);
+
+// Eliminar una columna de un tablero
+router.delete(
+    "/:boardId/columns/:columnId",
+    validateObjectId("boardId"),
+    validateObjectId("columnId"),
+    parentCheck,
+    validateBoardColumn,
+    deleteColumn
+);
+
+module.exports = router;

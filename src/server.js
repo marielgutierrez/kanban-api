@@ -1,7 +1,7 @@
 require('dotenv').config();
 const app = require('./app');
 const connectDB = require('./config/db');
-
+require('./models/Ticket');
 const PORT = process.env.PORT || 3000;
 
 // Conectar a la base de datos e iniciar el servidor
