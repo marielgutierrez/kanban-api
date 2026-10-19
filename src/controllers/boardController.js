@@ -1,6 +1,17 @@
 const Board = require("../models/Board");
 const Column = require("../models/Column");
 
+// Listar todos los tableros
+const getBoards = async (req, res, next) => {
+    try {
+        const boards = await Board.find().sort({ createdAt: -1 });
+
+        res.status(200).json(boards);
+    } catch (error) {
+        next(error);
+    }
+};
+
 // Crear un tablero
 const createBoard = async (req, res, next) => {
     try {
@@ -43,6 +54,7 @@ const getBoard = async (req, res, next) => {
 };
 
 module.exports = {
+    getBoards,
     createBoard,
     getBoard
 };

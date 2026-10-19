@@ -5,7 +5,7 @@ const morgan = require('morgan');
 
 const boardRoutes = require('./routes/boardRoutes');
 const columnRoutes = require('./routes/columnRoutes');
-
+const ticketRoutes = require('./routes/ticketRoutes');
 const app = express();
 
 // Middlewares globales
@@ -24,6 +24,7 @@ app.get('/api/health', (req, res) => {
 // Rutas de tableros y columnas
 app.use('/api/boards', boardRoutes);
 app.use('/api/boards', columnRoutes);
+app.use('/api/boards', ticketRoutes);
 
 // Middleware para rutas no encontradas
 app.use((req, res) => {
