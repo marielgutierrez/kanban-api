@@ -1,0 +1,35 @@
+/* src/styles/theme.css */
+:root {
+  /* Tema Claro (Modern SaaS) */
+  --bg-primary: #FAFAFA;
+  --surface-primary: #FFFFFF;
+  --text-primary: #1A202C;
+  --text-secondary: #718096;
+  --accent-color: #6554C0;
+  --accent-hover: #5243A6;
+  --border-color: #E2E8F0;
+  --danger-color: #E53E3E;
+  --radius: 8px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+html.dark {
+  /* Tema Oscuro */
+  --bg-primary: #121212;
+  --surface-primary: #1E1E1E;
+  --text-primary: #E0E0E0;
+  --text-secondary: #A0AEC0;
+  --accent-color: #9F8DF1;
+  --accent-hover: #8672E3;
+  --border-color: #2D3748;
+  --danger-color: #FC8181;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
