@@ -172,7 +172,7 @@ export const LoginPage = () => {
             label="Usuario o Correo Electrónico"
             name="identifier"
             type="text"
-            placeholder="ej. nacho@devboard.io o desarrollador"
+            placeholder="ej. nombre@devboard.io o desarrollador"
             value={formData.identifier}
             onChange={handleChange}
             error={errors.identifier}
